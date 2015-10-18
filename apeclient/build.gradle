@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 21
+  buildToolsVersion "21.1.2"
+
+  defaultConfig {
+    minSdkVersion 14
+    targetSdkVersion 21
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+
+    libraryVariants.all { variant ->
+      task("javadoc${variant.name.capitalize()}", type: Javadoc) {
+        description "Generates Javadoc for $variant.name."
+        title "Android APEClient library Javadoc"
+        source = variant.javaCompile.source
+        destinationDir = new File("${project.getProjectDir()}/javadoc/")
+        ext.androidJar = files(plugins.findPlugin("com.android.library").getBootClasspath())
+        classpath = files(variant.javaCompile.classpath.files) + ext.androidJar
+        exclude '**/internal/**'
+        exclude '**/R.java'
+        exclude '**/BuildConfig.java'
+        failOnError false
+      }
+
+      task("bundleJavadoc${variant.name.capitalize()}", type: Jar) {
+        description "Bundles Javadoc into zip for $variant.name."
+        classifier = "javadoc"
+        from tasks["javadoc${variant.name.capitalize()}"]
+      }
+    }
+  }
+
+  packagingOptions {
+    exclude 'META-INF/LICENSE.txt'
+    exclude 'LICENSE.txt'
+    exclude 'LICENSE'
+    exclude 'NOTICE'
+    exclude 'asm-license.txt'
+    exclude 'META-INF/NOTICE.txt'
+    exclude 'META-INF/notice.txt'
+    exclude 'META-INF/license.txt'
+    exclude 'META-INF/ASL2.0'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/NOTICE'
+  }
+}
+
+dependencies {
+  compile 'de.greenrobot:eventbus:2.2.1'
+  compile 'com.google.code.gson:gson:2.3'
+  compile 'com.squareup.retrofit:retrofit:1.6.1'
+
+  androidTestCompile 'junit:junit:4.11'
+  androidTestCompile 'org.mockito:mockito-core:1.9.5'
+  androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.1'
+  androidTestCompile 'com.google.dexmaker:dexmaker:1.1'
+  androidTestCompile 'com.squareup.assertj:assertj-android:1.0.0'
+}

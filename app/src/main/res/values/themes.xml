@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="APEChatDemo" parent="android:Theme.Holo.Light">
+
+        <!-- ACTION BAR -->
+        <item name="android:actionBarStyle">@style/APEChatDemo.ActionBar</item>
+
+        <!-- DEFAULT ITEM STYLES -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+    <style name="APEChatDemo.NoActionBar" parent="APEChatDemo">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

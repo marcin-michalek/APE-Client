@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ChatDemo</string>
+
+    <!--CHAT-->
+    <string name="wroteToYou">wrote to you.</string>
+    <string name="swipeRight">Swipe right!</string>
+    <string name="userLeft">User left</string>
+
+    <!--LOGIN-->
+    <string name="nick">nick</string>
+    <string name="join">Join!</string>
+    <string name="joinAChat">Join a chat</string>
+
+    <!--CHAT-->
+    <string name="yourMessageHere">Your message here…</string>
+    <string name="nickAlreadyTaken">Nick is already taken.</string>
+    <string name="inputDifferentNick">"Input different nick"</string>
+
+    <!--MENU-->
+    <string name="leaveChat">Leave chat</string>
+    <string name="information">Information</string>
+</resources>

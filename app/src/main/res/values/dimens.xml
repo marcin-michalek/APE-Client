@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--HEIGHT-->
+    <dimen name="height_separator_default">1dp</dimen>
+    <dimen name="height_separator_action_bar">2sp</dimen>
+    <dimen name="height_form_field_default">48dp</dimen>
+    <dimen name="height_message_box">60dp</dimen>
+    <dimen name="height_avatar_default">40dp</dimen>
+
+    <!--CORNERS-->
+    <dimen name="button_corner_radius_default">5dp</dimen>
+
+    <!--TEXT SIZE-->
+    <dimen name="text_size_button_default">20sp</dimen>
+    <dimen name="text_size_users_list">18sp</dimen>
+
+    <!--MARGIN-->
+    <dimen name="margin_form_field_sides_default">40dip</dimen>
+    <dimen name="margin_form_field_up_down_default">8dip</dimen>
+    <dimen name="margin_chat_list_bottom">60dp</dimen>
+</resources>

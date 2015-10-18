@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/chatMessagesList"
+                  android:layout_marginBottom="@dimen/margin_chat_list_bottom"
+
+                />
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="@dimen/height_message_box"
+                  android:layout_alignParentBottom="true"
+                  android:hint="@string/yourMessageHere"
+                  android:id="@+id/sendEditText"
+                  android:padding="5dp"
+                  android:textColor="@android:color/white"
+                  style="@style/APEChatDemo.SendMessage"/>
+
+    </RelativeLayout>
+
+    <ListView android:id="@+id/navigationDrawerList"
+              android:layout_width="240dp"
+              android:layout_height="match_parent"
+              android:layout_gravity="start"
+              android:choiceMode="singleChoice"
+              android:divider="@android:color/transparent"
+              android:dividerHeight="0dp"
+              android:background="#111"/>
+
+</android.support.v4.widget.DrawerLayout>

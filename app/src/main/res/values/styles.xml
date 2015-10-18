@@ -1,0 +1,57 @@
+<resources>
+
+    <style name="APEChatDemo.MainBackground">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:actionBarStyle">@style/APEChatDemo.ActionBar</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="APEChatDemo.ActionBar" parent="android:Widget.ActionBar">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:titleTextStyle">@style/APEChatDemo.ActionBarTitleText</item>
+    </style>
+
+    <style name="APEChatDemo.ActionBarTitleText" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/action_bar_text</item>
+    </style>
+
+    <style name="APEChatDemo.Separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_separator_default</item>
+        <item name="android:background">@color/seperator_default</item>
+    </style>
+
+    <style name="APEChatDemo.Separator.ActionBar" parent="APEChatDemo.Separator">
+        <item name="android:background">@color/seperator_action_bar</item>
+    </style>
+
+    <style name="APEChatDemo.FormField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">@dimen/text_size_button_default</item>
+        <item name="android:layout_height">@dimen/height_form_field_default</item>
+        <item name="android:layout_marginRight">@dimen/margin_form_field_sides_default</item>
+        <item name="android:layout_marginLeft">@dimen/margin_form_field_sides_default</item>
+        <item name="android:layout_marginTop">@dimen/margin_form_field_up_down_default</item>
+        <item name="android:layout_marginBottom">@dimen/margin_form_field_up_down_default</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="APEChatDemo.LinkButton" parent="APEChatDemo.FormField">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/states_button_link</item>
+    </style>
+
+    <style name="APEChatDemo.EditText" parent="APEChatDemo.FormField">
+        <item name="android:background">@color/transparent_white</item>
+    </style>
+
+    <style name="APEChatDemo.SendMessage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">@dimen/text_size_button_default</item>
+        <item name="android:layout_height">@dimen/height_form_field_default</item>
+        <item name="android:layout_marginBottom">@dimen/margin_form_field_up_down_default</item>
+        <item name="android:background">@color/transparent_white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+</resources>

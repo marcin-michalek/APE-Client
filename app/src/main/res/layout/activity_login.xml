@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="@android:color/background_light"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <View style="@style/APEChatDemo.Separator.ActionBar" />
+
+    <EditText
+        android:gravity="center"
+        android:hint="@string/nick"
+        android:id="@+id/nickEditText"
+        style="@style/APEChatDemo.EditText"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:text="@string/join"
+        android:id="@+id/joinButton"
+        style="@style/APEChatDemo.LinkButton"
+        android:layout_below="@id/nickEditText" />
+
+</RelativeLayout>

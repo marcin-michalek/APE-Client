@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--GENERAL-->
+    <color name="transparent_white">#58FFFFFF</color>
+
+    <!--ACTION BAR-->
+    <color name="action_bar_text">#0000AA</color>
+
+    <!--SEPERATOR-->
+    <color name="seperator_action_bar">#0000AA</color>
+    <color name="seperator_default">#000000</color>
+
+    <!--BUTTON-->
+    <color name="button_default">#0000AA</color>
+    <color name="button_pressed">#000000</color>
+</resources>
